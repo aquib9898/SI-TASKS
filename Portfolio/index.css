@@ -4,16 +4,16 @@ body {
   width: 100vw;
   padding-top: 20vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
  
 }
 
 h1 {
-  /* Added for multi-line layout */
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1.4; /* Increased for better readability */
+  line-height: 1.4; 
   padding: 0;
 }
 
@@ -37,7 +37,7 @@ h1 span, #subtitle {
 #name {
   font-size: 6rem;
   font-weight: 900;
-  animation: flicker-alt 2s infinite alternate; /* Pink neon */
+  animation: flicker-alt 2s infinite alternate;
 }
 
 #subtitle {
@@ -47,7 +47,7 @@ h1 span, #subtitle {
 }
 
 #greeting, #intro, #subtitle {
-  animation: flicker 1.5s infinite alternate; /* Blue neon */
+  animation: flicker 1.5s infinite alternate;
 }
 
 @keyframes flicker {
