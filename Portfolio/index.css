@@ -389,7 +389,9 @@ footer img {
   }
 
   #contact-section {
-    padding-bottom: 5rem;
+    width: 95%;
+    padding: 4rem 2rem;
+    margin-bottom: 6rem;
   }
 
   .contact-container {
