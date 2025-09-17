@@ -1,6 +1,10 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(to bottom, #1a1a1a, #000000);
-  height: 200vh;
   width: 100vw;
   padding-top: 20vh;
   display: flex;
@@ -76,8 +80,8 @@ h1 span, #subtitle {
   height: 8vh;
   display: flex;
   flex-direction: row;
-  background: #1a1a1a;
-  border-bottom: 1px solid rgba(0, 191, 255, 0.7);
+  background: #1a1a1a;  
+  border-bottom: 0.1rem solid rgba(0, 191, 255, 0.7);
   z-index: 1000;
 }
 #navbar div{
@@ -91,7 +95,7 @@ h1 span, #subtitle {
 }
 
 #navbar div + div {
-    border-left: 1px solid rgba(0, 191, 255, 0.7);
+    border-left: 0.1rem solid rgba(0, 191, 255, 0.7);
 }
 
 #navbar div:hover {
@@ -102,11 +106,79 @@ h1 span, #subtitle {
 
 #introImg {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 25rem;
+  height: 25rem;
   object-fit: cover;
   border-radius: 50%;
   margin: 4rem auto 0;
-  border: 3px solid rgba(0, 191, 255, 0.7);
+  border: 0.3rem solid rgba(0, 191, 255, 0.7);
   animation: flicker-image 2s infinite alternate;
+}
+
+.section-divider {
+  width: 80%;
+  height: 0.2rem;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 0.8rem #fff, 0 0 1.6rem rgba(0, 191, 255, 0.7);
+  margin: 6rem 0;
+}
+
+#about-heading, #skills-heading, #projects-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f0f8ff;
+  text-align: center;
+  text-shadow: 0 0 1rem #fff, 0 0 1.5rem #fff, 0 0 2rem rgba(0, 191, 255, 0.7);
+}
+
+#about-text {
+  color: white;
+  max-width: 70ch;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+#skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 90rem;
+}
+
+#skills-grid img {
+  width: 8rem;
+  height: 8rem;
+}
+
+#logo-css { filter: drop-shadow(0 0 2rem #1572B6); }
+#logo-tailwind { filter: drop-shadow(0 0 2rem #38B2AC); }
+#logo-js { filter: drop-shadow(0 0 2rem #F7DF1E); }
+#logo-react { filter: drop-shadow(0 0 2rem #61DAFB); }
+#logo-node { filter: drop-shadow(0 0 2rem #339933); }
+#logo-mongo { filter: drop-shadow(0 0 2rem #47A248); }
+#logo-cpp { filter: drop-shadow(0 0 2rem #00599C); }
+
+#projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  width: 90%;
+}
+
+#projects-grid iframe {
+  width: 40rem;
+  max-width: 100%;
+  height: 30rem;
+  border: 0.2rem solid rgba(0, 191, 255, 0.7);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1.5rem rgba(0, 191, 255, 0.5);
+  background-color: #1a1a1a;
 }
