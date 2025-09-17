@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -84,21 +84,22 @@ h1 span, #subtitle {
   border-bottom: 0.1rem solid rgba(0, 191, 255, 0.7);
   z-index: 1000;
 }
-#navbar div{
+#navbar a{
     flex:1;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    text-decoration: none;
     background: linear-gradient(to top, rgba(0, 191, 255, 0.1), transparent);
     transition: text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-#navbar div + div {
+#navbar a + a {
     border-left: 0.1rem solid rgba(0, 191, 255, 0.7);
 }
 
-#navbar div:hover {
+#navbar a:hover {
     text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.8), 0 0 1rem rgba(0, 191, 255, 0.7);
     box-shadow: inset 0 0 0.5rem rgba(0, 191, 255, 0.7), inset 0 0 1rem rgba(0, 191, 255, 0.5);
     cursor: pointer;
@@ -115,7 +116,7 @@ h1 span, #subtitle {
   animation: flicker-image 2s infinite alternate;
 }
 
-.hero-btn {
+.resume-btn {
   padding: 1rem 2.5rem;
   border: 0.2rem solid rgba(0, 191, 255, 0.7);
   border-radius: 5rem;
@@ -128,13 +129,13 @@ h1 span, #subtitle {
   transition: all 0.3s ease;
 }
 
-.hero-btn:hover {
+.resume-btn:hover {
   text-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.9), 0 0 1.5rem rgba(0, 191, 255, 0.7);
   box-shadow: 0 0 1.5rem rgba(0, 191, 255, 0.7), inset 0 0 0.5rem rgba(0, 191, 255, 0.5);
   cursor: pointer;
 }
 
-#hero-buttons {
+#resume-buttons {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -148,6 +149,10 @@ h1 span, #subtitle {
   border: none;
   box-shadow: 0 0 0.8rem #fff, 0 0 1.6rem rgba(0, 191, 255, 0.7);
   margin: 6rem 0;
+}
+
+#about-section, #skills-section, #projects-section {
+  scroll-margin-top: 10vh;
 }
 
 #about-heading, #skills-heading, #projects-heading {
@@ -207,4 +212,39 @@ h1 span, #subtitle {
   border-radius: 1.5rem;
   box-shadow: 0 0 1.5rem rgba(0, 191, 255, 0.5);
   background-color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 15vh; 
+  }
+
+  #greeting { font-size: 3.2rem; }
+  #intro { font-size: 2.2rem; }
+  #name { font-size: 4.8rem; }
+  #subtitle { font-size: 2rem; }
+
+  #introImg {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  
+  #resume-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+ 
+  #resume-content, 
+#about-section,
+#skills-section {
+  margin-bottom: 25vh;  
+}
+
+ 
+  #projects-grid iframe {
+    height: 35rem;
+  }
 }
